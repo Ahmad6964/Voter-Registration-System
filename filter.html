@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="text-2xl font-semibold">Voters</h1>
+   <div class="filters flex space-x-2 ml-64">
+    <div class="pro">
+        <h3>Provision</h3>
+        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="state-data" onchange="stateData()">
+          <option value="" disabled-selected>Select</option>
+
+          <option value="1">Punjab</option>
+            <option value="2">Sindh</option>
+            <option value="3">balochistan</option>
+            <option value="4">Kpk</option>
+          </select>
+    </div>
+    <div class="district">
+        <h3>District</h3>
+        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="district-data" onchange="districtData()">
+          <option value="" disabled-selected>Select</option>
+            <option value="1">Abbottabad</option>
+            <option value="2">Astore</option>
+          </select>
+    </div>
+    <div class="city">
+        <h3>City</h3>
+        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="city-data" onchange="cityData()">
+          <option value="" disabled-selected>Select</option>
+            <option value="1">Islamabad</option>
+            <option value="2">Karachi</option>
+          </select>
+    </div>
+    <div class="UC">
+        <h3>UC</h3>
+        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="uc-data"  onchange="ucData()">
+          <option value="" disabled-selected>Select</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+    </div>
+    <div class="ward">
+        <h3>ward</h3>
+        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="ward-data" onchange="wardData()">
+          <option value="" disabled-selected>Select</option>
+            <option>1</option>
+            <option>2</option>
+          
+          </select>
+    </div>
+    <div class="gender">
+        <h3>Gender</h3>
+        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="gender-data" onchange="genderData()">
+          <option value="" disabled-selected>Select</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          
+          </select>
+    </div>
+   </div>
+   
+   <div class="ml-96">
+   <table class="border-separate border-spacing-2 border border-slate-400 ...">
+    <div class=" mt-6 ml-58">
+    <thead>
+      <tr>
+        <th class="border border-slate-300 ...">id</th>
+        <th class="border border-slate-300 ...">Name</th>
+        <th class="border border-slate-300 ...">Age</th>
+        <th class="border border-slate-300 ...">Gender</th>
+        <th class="border border-slate-300 ...">State</th>
+        <th class="border border-slate-300 ...">District</th>
+        <th class="border border-slate-300 ...">City</th>
+        <th class="border border-slate-300 ...">UC</th>
+        <th class="border border-slate-300 ...">Ward</th>
+        <th class="border border-slate-300 ...">CNIC</th>
+      </tr>
+    </thead>
+    <tbody id="pro_data">
+           
+    </tbody>
+  </div>
+</div>
+  </table>
+  <script src="/filter.js"></script>
+</body>
+</html>
