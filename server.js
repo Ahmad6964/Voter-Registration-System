@@ -145,7 +145,7 @@ app.get("/voters/ward/:ward", (req, res) => {
 });
 
 // Filter By voter Gender
-app.get("/voters/gender/:gender", (req, res) => {
+app.get("/voters/gender/:gender_id", (req, res) => {
   mysqlConnection.query(`SELECT user_data.name,user_data.age,gender.gender,user_data.CNIC,
   state.state,dist.district,cities_pk.city,ucs.uc,
   ward.ward FROM user_data JOIN gender ON
@@ -154,8 +154,8 @@ app.get("/voters/gender/:gender", (req, res) => {
   dist.dis_id = user_data.dis_id JOIN cities_pk ON
   cities_pk.city_id = user_data.city_id JOIN ucs ON
   ucs.uc_id = user_data.uc_id JOIN ward ON
-  ward.ward_id = user_data.ward_id WHERE user_data.gender_id = ?;`,
-  [req.params.gender],
+  ward.ward_id = user_data.ward_id WHERE gender.gender_id = ?;`,
+  [req.params.gender_id],
   (err, rows) => {
     if (!err) {
       res.send(rows);
